@@ -2,15 +2,22 @@
   "name": "eco-verde-devweb2",
   "version": "1.0.0",
   "description": "Projeto extensionista Eco Verde - Desenvolvimento Web II",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "server": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
+    "cookie": "^1.0.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-session": "^1.19.0",
-    "mongoose": "^9.5.0"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.5.0",
+    "next": "^15.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
