@@ -1,5 +1,3 @@
-// carrinho.js - gerencia o carrinho de compras
-
 function carregarCarrinho() {
   let carrinho = JSON.parse(localStorage.getItem('ecoverde_carrinho') || '[]');
   let tbody = document.getElementById('listaCarrinho');
@@ -48,7 +46,6 @@ function carregarCarrinho() {
   document.getElementById('totalPreco').textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
 }
 
-// remove um item do carrinho
 function remover(id) {
   let carrinho = JSON.parse(localStorage.getItem('ecoverde_carrinho') || '[]');
   carrinho = carrinho.filter(function(i) { return i.id !== id; });
@@ -56,7 +53,6 @@ function remover(id) {
   carregarCarrinho();
 }
 
-// aumenta a quantidade de um item
 function aumentar(id) {
   let carrinho = JSON.parse(localStorage.getItem('ecoverde_carrinho') || '[]');
   let item = carrinho.find(function(i) { return i.id === id; });
@@ -65,7 +61,6 @@ function aumentar(id) {
   carregarCarrinho();
 }
 
-// diminui a quantidade; remove se chegar a zero
 function diminuir(id) {
   let carrinho = JSON.parse(localStorage.getItem('ecoverde_carrinho') || '[]');
   let item = carrinho.find(function(i) { return i.id === id; });
@@ -81,7 +76,6 @@ function diminuir(id) {
   carregarCarrinho();
 }
 
-// limpa todo o carrinho
 document.getElementById('btnLimpar').addEventListener('click', function() {
   if (confirm('Deseja limpar o carrinho?')) {
     localStorage.removeItem('ecoverde_carrinho');
@@ -89,7 +83,6 @@ document.getElementById('btnLimpar').addEventListener('click', function() {
   }
 });
 
-// finaliza a compra
 document.getElementById('btnFinalizar').addEventListener('click', function() {
   let carrinho = JSON.parse(localStorage.getItem('ecoverde_carrinho') || '[]');
 

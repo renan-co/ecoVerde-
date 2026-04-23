@@ -371,7 +371,6 @@ td {
   color: #5b6d5b;
 }
 
-/* ── Logo como link ── */
 a.logo {
   text-decoration: none;
   color: white;
@@ -379,7 +378,6 @@ a.logo {
   font-weight: bold;
 }
 
-/* ── Botão sair no menu ── */
 .btn-menu-sair {
   background-color: #fee2e2 !important;
   color: #b91c1c !important;
@@ -387,7 +385,6 @@ a.logo {
   padding: 8px 10px;
 }
 
-/* ── Pontos badge ── */
 .pontos-badge {
   font-size: 13px;
   font-weight: bold;
@@ -395,7 +392,6 @@ a.logo {
   margin-top: 6px;
 }
 
-/* ── Link voltar ── */
 .link-voltar {
   color: #166534;
   text-decoration: none;
@@ -406,7 +402,6 @@ a.logo {
   text-decoration: underline;
 }
 
-/* ── Link verde inline ── */
 .link-verde {
   color: #16a34a;
   font-weight: bold;
@@ -417,18 +412,15 @@ a.logo {
   text-decoration: underline;
 }
 
-/* ── Formulário único (login/cadastro) ── */
 .form-unico {
   max-width: 520px;
   margin: 0 auto;
 }
 
-/* ── Obrigatório ── */
 .obrigatorio {
   color: #b91c1c;
 }
 
-/* ── Alertas de página ── */
 .alerta {
   padding: 14px 18px;
   border-radius: 10px;
@@ -454,13 +446,11 @@ a.logo {
   border-left: 5px solid #f59e0b;
 }
 
-/* ── Tag grande ── */
 .tag-grande {
   font-size: 15px;
   padding: 7px 14px;
 }
 
-/* ── Tabela de detalhe ── */
 .tabela-detalhe {
   width: 100%;
   border-collapse: collapse;
@@ -480,7 +470,6 @@ a.logo {
   width: 40%;
 }
 
-/* ── Toast de notificação ── */
 .toast {
   position: fixed;
   bottom: 24px;
@@ -511,7 +500,6 @@ a.logo {
   margin: 0 auto;
 }
 
-/* ── Input de edição inline na tabela ── */
 .input-edicao {
   width: 100%;
   padding: 6px 8px;
@@ -521,14 +509,12 @@ a.logo {
   background-color: #f0fdf4;
 }
 
-/* ── Grade de produtos ── */
 .grid-produtos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* ── Card de produto ── */
 .produto-card {
   display: flex;
   flex-direction: column;
@@ -572,7 +558,6 @@ a.logo {
   margin: 0;
 }
 
-/* ── Seletor de quantidade ── */
 .qty-controle {
   display: flex;
   align-items: center;
@@ -624,7 +609,6 @@ a.logo {
   font-weight: bold;
 }
 
-/* ── Botão adicionar ao carrinho ── */
 .btn-adicionar {
   margin-top: 4px;
   width: 100%;
@@ -632,7 +616,6 @@ a.logo {
   padding: 10px 12px;
 }
 
-/* ── Botão remover no carrinho ── */
 .btn-remover {
   background: #fee2e2;
   color: #b91c1c;
@@ -648,7 +631,6 @@ a.logo {
   background: #fca5a5;
 }
 
-/* ── Resumo do carrinho ── */
 .carrinho-resumo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -678,7 +660,6 @@ a.logo {
   border-bottom: none;
 }
 
-/* ── Botão finalizar compra ── */
 .btn-finalizar {
   background-color: #166534;
   color: white;
@@ -691,12 +672,10 @@ a.logo {
   background-color: #14532d;
 }
 
-/* ── Texto central (carrinho vazio) ── */
 .texto-centro {
   text-align: center;
 }
 
-/* ── Seção tabela (evita espaço extra) ── */
 .secao-tabela {
   margin-top: 0;
 }

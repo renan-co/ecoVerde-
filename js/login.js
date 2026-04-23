@@ -1,5 +1,3 @@
-// login.js
-
 carregarUsuarios();
 
 document.getElementById('formLogin').addEventListener('submit', async function(e) {
@@ -28,7 +26,6 @@ document.getElementById('formLogin').addEventListener('submit', async function(e
   }
 });
 
-// carrega e mostra a lista de usuários
 async function carregarUsuarios() {
   let resposta = await fetch('/api/usuarios');
   let usuarios = await resposta.json();
@@ -60,7 +57,6 @@ async function carregarUsuarios() {
   });
 }
 
-// transforma a linha em campos editáveis
 function editarUsuario(id, nome, email, tipo) {
   let tr = document.getElementById('linha-' + id);
   if (!tr) return;
@@ -83,7 +79,6 @@ function editarUsuario(id, nome, email, tipo) {
   `;
 }
 
-// salva as alterações do usuário
 async function salvarUsuario(id) {
   let nome = document.getElementById('edit-nome-' + id).value;
   let email = document.getElementById('edit-email-' + id).value;
@@ -110,7 +105,6 @@ async function salvarUsuario(id) {
   }
 }
 
-// remove o usuário
 async function excluirUsuario(id, nome) {
   if (!confirm('Deseja excluir o usuário "' + nome + '"?')) return;
 

@@ -1,5 +1,3 @@
-// produtos.js - catálogo de produtos da fazenda Eco Verde
-
 var listaProdutos = [
   { id: 1, nome: 'Maçã', categoria: 'Fruta', emoji: '🍎', preco: 4.90, unidade: 'kg', estoque: 50 },
   { id: 2, nome: 'Banana', categoria: 'Fruta', emoji: '🍌', preco: 3.50, unidade: 'kg', estoque: 80 },
@@ -17,7 +15,6 @@ var listaProdutos = [
   { id: 14, nome: 'Salsinha', categoria: 'Ervas', emoji: '🌿', preco: 2.90, unidade: 'maço', estoque: 30 },
 ];
 
-// mostra os cards na tela
 function mostrarProdutos(lista) {
   let container = document.getElementById('listaProdutos');
   container.innerHTML = '';
@@ -47,7 +44,6 @@ function mostrarProdutos(lista) {
   });
 }
 
-// aumenta a quantidade no input do card
 function aumentarQtd(id) {
   let input = document.getElementById('qtd-' + id);
   let produto = listaProdutos.find(function(p) { return p.id === id; });
@@ -56,7 +52,6 @@ function aumentarQtd(id) {
   }
 }
 
-// diminui a quantidade no input do card
 function diminuirQtd(id) {
   let input = document.getElementById('qtd-' + id);
   if (parseInt(input.value) > 1) {
@@ -64,7 +59,6 @@ function diminuirQtd(id) {
   }
 }
 
-// adiciona o produto ao carrinho salvo no localStorage
 function adicionarCarrinho(id) {
   let produto = listaProdutos.find(function(p) { return p.id === id; });
   let qtd = parseInt(document.getElementById('qtd-' + id).value);
@@ -94,7 +88,6 @@ function adicionarCarrinho(id) {
   alert(produto.nome + ' adicionado ao carrinho!');
 }
 
-// filtro pela barra de busca
 document.getElementById('busca').addEventListener('input', function() {
   let termo = this.value.toLowerCase();
   let cat = document.getElementById('filtroCategoria').value;
@@ -106,7 +99,6 @@ document.getElementById('busca').addEventListener('input', function() {
   mostrarProdutos(filtrado);
 });
 
-// filtro por categoria
 document.getElementById('filtroCategoria').addEventListener('change', function() {
   let cat = this.value;
   let termo = document.getElementById('busca').value.toLowerCase();

@@ -1,7 +1,5 @@
-// cadastro.js — envia o formulário de cadastro para a API
-
 document.getElementById('formCadastro').addEventListener('submit', async function(e) {
-  e.preventDefault(); // impede o envio normal do formulário
+  e.preventDefault();
 
   const nome  = document.getElementById('nome').value;
   const email = document.getElementById('email').value;
@@ -9,13 +7,11 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
   const tipo  = document.getElementById('tipo').value;
   const msg   = document.getElementById('mensagem');
 
-  // Validação simples
   if (senha.length < 6) {
     msg.textContent = 'A senha deve ter pelo menos 6 caracteres.';
     return;
   }
 
-  // Envia os dados para a API
   const resposta = await fetch('/api/usuarios', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -27,7 +23,6 @@ document.getElementById('formCadastro').addEventListener('submit', async functio
 
   if (resposta.ok) {
     msg.className = 'mensagem sucesso';
-    // Cadastrou! Vai para a página de login após 1,5 segundos
     setTimeout(() => {
       window.location.href = 'login.html';
     }, 1500);
