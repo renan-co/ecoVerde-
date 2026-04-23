@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Verde | Carrinho</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container navbar">
+      <h1 class="logo">🌱 Eco Verde</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="carrinho.html" class="ativo">Carrinho</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="secao">
+    <div class="container">
+      <h2 class="titulo-secao">Meu Carrinho</h2>
+      <p class="subtitulo">Revise os produtos e finalize o seu pedido.</p>
+
+      <!-- mensagem quando o carrinho está vazio -->
+      <div id="carrinhoVazio" class="card texto-centro" style="display:none; padding: 48px 20px;">
+        <p style="font-size: 48px;">🛒</p>
+        <h3 style="margin: 16px 0 8px;">Seu carrinho está vazio</h3>
+        <p style="color: #476047; margin-bottom: 24px;">Adicione produtos frescos da nossa fazenda!</p>
+        <a href="produtos.html" class="btn">Ver Produtos</a>
+      </div>
+
+      <!-- conteúdo do carrinho -->
+      <div id="carrinhoConteudo">
+
+        <!-- tabela de itens -->
+        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 20px;">
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th style="text-align:center;">Quantidade</th>
+                <th style="text-align:right;">Preço Unit.</th>
+                <th style="text-align:right;">Subtotal</th>
+                <th style="text-align:center;">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="listaCarrinho"></tbody>
+          </table>
+        </div>
+
+        <!-- resumo e botões -->
+        <div class="carrinho-resumo">
+          <div class="card carrinho-total-card">
+            <div class="carrinho-total-linha">
+              <span>Total de itens:</span>
+              <span id="totalItens">0</span>
+            </div>
+            <div class="carrinho-total-linha carrinho-total-destaque">
+              <span>Total a pagar:</span>
+              <span id="totalPreco">R$ 0,00</span>
+            </div>
+            <div class="botoes-form">
+              <button id="btnLimpar" class="btn btn-secundario"> Limpar Carrinho</button>
+              <button id="btnFinalizar" class="btn btn-finalizar">Finalizar Compra</button>
+            </div>
+          </div>
+
+          <div class="card verde-claro" style="padding: 20px;">
+            <h3 style="margin-bottom: 10px; color: #166534;">🌿 Dica Eco Verde</h3>
+            <p style="font-size: 14px; color: #374151;">
+              Todos os nossos produtos são cultivados sem agrotóxicos,
+              com reaproveitamento de água e energia solar.
+              Consumir local reduz o carbono no transporte!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Projeto Eco Verde - Desenvolvimento Web II</p>
+      <p id="ano"></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/carrinho.js"></script>
+</body>
+</html>
