@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoVerde - Cadastro</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <nav class="navbar">
+        <a href="/index.html" class="logo">🌿 EcoVerde</a>
+        <ul class="menu">
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/login.html">Entrar</a></li>
+          <li><a href="/cadastro.html" class="ativo">Cadastrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <div class="form-unico">
+          <h2 class="titulo-secao" style="text-align:left; margin-bottom: 20px;">
+            Criar conta no EcoVerde
+          </h2>
+
+          <div id="alerta-cadastro" class="alerta"></div>
+
+          <form class="formulario card" onsubmit="cadastrarUsuario(event)">
+
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              required
+            />
+
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Crie uma senha"
+              required
+            />
+
+            <button type="submit" class="btn" style="margin-top: 8px;">
+              Criar conta
+            </button>
+
+          </form>
+
+          <p style="margin-top: 16px; text-align: center;">
+            Já tem conta?
+            <a href="/login.html" class="link-verde">Faça login aqui</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>🌿 EcoVerde </p>
+      <p class="rodape-sub">Projeto de Desenvolvimento Web II</p>
+      <p class="rodape-ano">© 2026</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/cadastro.js"></script>
+
+</body>
+</html>

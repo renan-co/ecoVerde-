@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoVerde - Login</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <nav class="navbar">
+        <a href="/index.html" class="logo">🌿 EcoVerde</a>
+        <ul class="menu">
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/login.html" class="ativo">Entrar</a></li>
+          <li><a href="/cadastro.html">Cadastrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <div class="form-unico">
+          <h2 class="titulo-secao" style="text-align:left; margin-bottom: 20px;">
+            Entrar na sua conta
+          </h2>
+
+          <div id="alerta-login" class="alerta"></div>
+
+          <form class="formulario card" onsubmit="fazerLogin(event)">
+
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              required
+            />
+
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Sua senha"
+              required
+            />
+
+            <button type="submit" class="btn" style="margin-top: 8px;">
+              Entrar
+            </button>
+
+          </form>
+
+          <p style="margin-top: 16px; text-align: center;">
+            Não tem conta?
+            <a href="/cadastro.html" class="link-verde">Cadastre-se aqui</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="secao verde-claro">
+      <div class="container">
+        <h2 class="titulo-secao" style="margin-bottom: 20px;">Usuários Cadastrados</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-usuarios">
+            <tr><td colspan="3" class="vazio">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>🌿 EcoVerde </p>
+      <p class="rodape-sub">Projeto de Desenvolvimento Web II</p>
+      <p class="rodape-ano">© 2026</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoVerde - Carrinho</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <nav class="navbar">
+        <a href="/index.html" class="logo">🌿 EcoVerde</a>
+        <ul class="menu">
+          <li><a href="/produtos.html">Produtos</a></li>
+          <li><a href="/carrinho.html" class="ativo">Carrinho</a></li>
+          <li id="area-login" style="display:flex; gap:8px; align-items:center;"></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="secao">
+      <div class="container">
+        <h2 class="titulo-secao">Meu Carrinho</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Preço Unit.</th>
+              <th>Subtotal</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela-carrinho">
+            <tr>
+              <td colspan="5" class="vazio">Carregando carrinho...</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="carrinho-resumo">
+
+          <div class="card">
+            <h3 style="margin-bottom: 16px;">Ações</h3>
+            <div class="botoes-form">
+              <a href="/produtos.html" class="btn btn-secundario">
+                ← Continuar comprando
+              </a>
+              <button class="btn btn-remover" onclick="limparCarrinho()">
+                Esvaziar carrinho
+              </button>
+            </div>
+          </div>
+
+          <div class="card carrinho-total-card">
+            <div class="carrinho-total-linha">
+              <span>Itens no carrinho:</span>
+              <span id="qtd-itens">0</span>
+            </div>
+            <div class="carrinho-total-linha carrinho-total-destaque">
+              <span>Total:</span>
+              <span id="total-carrinho">R$ 0,00</span>
+            </div>
+            <button class="btn btn-finalizar" onclick="alert('Compra finalizada! Obrigado 🌿')">
+              Finalizar Compra
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>🌿 EcoVerde </p>
+      <p class="rodape-sub">Projeto de Desenvolvimento Web II</p>
+      <p class="rodape-ano">© 2026</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/carrinho.js"></script>
+
+</body>
+</html>
